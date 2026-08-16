@@ -1,0 +1,13 @@
+name = "Serenity Heights"
+author = "LostDoll"
+version = "1.0.0"
+pack-format = "packwiz:1.1.0"
+
+[index]
+file = "index.toml"
+hash-format = "sha256"
+hash = "db87c2d79bc1d0622889bf1d0f89174d9469102ff16cc203b12003d6801c54ea"
+
+[versions]
+minecraft = "1.21.1"
+neoforge = "21.1.247"
