@@ -13,24 +13,36 @@ file = "config/adaptive_performance_tweaks/player_easy_child_mode.cfg"
 hash = "7c3229a74c339f5beb06db98e952d7a7fdcb5f59f7f96591ee28fa079eb9cc7e"
 
 [[files]]
+file = "config/adaptive_performance_tweaks/player_starter_protection.cfg"
+hash = "08c01ce5077469bebd0a83c4ab259854cba1be75165f02d2ddd096ae472571ae"
+
+[[files]]
 file = "config/adaptive_performance_tweaks/spawn.cfg"
 hash = "e587450ab7ce75edd2a5b6896d1c7f7364f6817019dfa47ce46a5da57247001e"
 
 [[files]]
+file = "config/adaptive_performance_tweaks/view_distance.cfg"
+hash = "01ca72f23cb8d626ec9b6036da6e977dee275537f5bd3234eb17b667e355b8c0"
+
+[[files]]
 file = "config/biomesoplenty/generation.toml"
-hash = "428c8be557854161e82b21b5654d2865b9b0c53bba969f20398568f94d4ae030"
+hash = "44398dc458f517ed6f1845806d844a1fe1d9eb371ec76554222703ef8783c104"
 
 [[files]]
 file = "config/create-server.toml"
-hash = "43fd49a7b54b1b0c58ca67b70268e2a791197f6934faf07f317fe8ae91c2671d"
+hash = "67265bb6a61668af426abb33d1a567e516b3db371dadb42a719fb40da7d253d7"
 
 [[files]]
 file = "config/crittersandcompanions-common.json5"
 hash = "f17308cb012ddbb115f039d2759a9a2d6044669fce8fd696d5f9375e95067ebf"
 
 [[files]]
+file = "config/entityculling.json"
+hash = "5692897bda673ee513c212e1d04c4753f2ded4708726c4ac63b81659fb4bf5ca"
+
+[[files]]
 file = "config/epicfight-common.toml"
-hash = "109880f5bc27aa1b36aa441f82d39c7cc06610f0e9628a7015ae50afd3bab9d8"
+hash = "0b3ef1d949429a52c9d9404c57e907ac79b6e44f8282640488b44a415e57b852"
 
 [[files]]
 file = "config/iris.properties"
@@ -38,23 +50,40 @@ hash = "695f7cf454009cf890896bf89a5d12cb395e94584bfc4a60b4481cde14077191"
 
 [[files]]
 file = "config/irons_spellbooks-server.toml"
-hash = "384ce9818b83762df52bde24de9f021d0308782b9dc1f22ba69e2f864bba24e7"
+hash = "81d885d6f4c4f257e24be543493d08984ab56dc319e469026df4eb755d342133"
+
+[[files]]
+file = "config/lithium.properties"
+hash = "f218f58338ce24b66448f9a6b2ed4e167432f723d9a4f1bf86bedb3de94643a5"
 
 [[files]]
 file = "config/lootr-common.toml"
-hash = "0caaeaa664d242c97b9344a6d5a30aabf2c4af52d8fb18b4cb63a9fa543bf74d"
+hash = "7b693f6d9939d8f198cd4c530add127a34844f862e2b550807305386b316bc16"
 
 [[files]]
 file = "config/minecolonies-server.toml"
-hash = "c3a6308f2baa21b91119648e2c85ac1568ab8087d55e79eaa1313a7d2ad9d8d4"
+hash = "36c0a63c39f1d40f83d737b4bb058671cc973477957ab706f8968f46b4af8ba7"
+
+[[files]]
+file = "config/modernfix-mixins.properties"
+hash = "6bc4c5d23656c82ccf888f5c9368a804e5a40332fdb79057765a2e99d9e255a1"
 
 [[files]]
 file = "config/naturalist-server.toml"
 hash = "6ab307d70183380a10a0cbc50de621c2d23d43946384b8c08531acec14eb8dbf"
 
 [[files]]
+file = "config/sodium-options.json"
+hash = "c2d909234c14defc039e4dadae389cbe819118e67832c70421cbd9d6e10e6775"
+
+[[files]]
 file = "mods/adaptive-performance-tweaks.pw.toml"
 hash = "8fe1bd6a78ea5505d360d303af05c319ea0f1ffd6dc4ad81eb2510acc0fad021"
+metafile = true
+
+[[files]]
+file = "mods/alltheleaks.pw.toml"
+hash = "bb6f1ed9e7a09d936a0a8028d3332eb0b892f8fddfdf1d46ef0bd71b8d1ebb21"
 metafile = true
 
 [[files]]
@@ -65,6 +94,11 @@ metafile = true
 [[files]]
 file = "mods/applied-energistics-2.pw.toml"
 hash = "afa4f499d946514c51f41f8f2202ac0946052b012570a210ebb31f0d0d627672"
+metafile = true
+
+[[files]]
+file = "mods/arcadia-patch-create.pw.toml"
+hash = "b202e4755e47daa43b8257b641cc078a9ec0847d210c9b0952e269faa6f17fab"
 metafile = true
 
 [[files]]
@@ -93,6 +127,11 @@ hash = "05abf6fafe4a8adf5aaa24f09b7dedfbe199a8727d925e816fc608d6357f5ba8"
 metafile = true
 
 [[files]]
+file = "mods/c2me-neoforge.pw.toml"
+hash = "8eeaf5023a8c5978f68ecd71d09ac46516167111ab2f46ab2c3909b8f9283f92"
+metafile = true
+
+[[files]]
 file = "mods/carry-on.pw.toml"
 hash = "838dbcb90c93bab58691e82c95045bd97c3e096e3a2680a00cf063e56ce35ce3"
 metafile = true
@@ -115,6 +154,11 @@ metafile = true
 [[files]]
 file = "mods/copycats.pw.toml"
 hash = "e3d0e6da51df08d87c9b88fd6b4011de711d95497263b9ecfd1466cbd34b98d5"
+metafile = true
+
+[[files]]
+file = "mods/create-advanced-optimization.pw.toml"
+hash = "606f55d99942d4cfd63153480fdcfa02b1e986e3c8bdbcb841294b56ad528cf6"
 metafile = true
 
 [[files]]
@@ -175,6 +219,11 @@ metafile = true
 [[files]]
 file = "mods/e4mc.pw.toml"
 hash = "947d0493c5a7039e4fa0a9318daa9dad36870f10d8764e9835783144a292a619"
+metafile = true
+
+[[files]]
+file = "mods/entityculling.pw.toml"
+hash = "346f28e2ec19543a6b410bf2cf5389401bc6d1aa0189e39d07bf11d64d8bd321"
 metafile = true
 
 [[files]]
@@ -260,6 +309,11 @@ metafile = true
 [[files]]
 file = "mods/kotlin-for-forge.pw.toml"
 hash = "712a69b3569a8055979de6eea262068535fe182dffb3833e53e5833e9cbf9766"
+metafile = true
+
+[[files]]
+file = "mods/lithium.pw.toml"
+hash = "51e129832b04acd57da470fc41725bad5e101b6a6b1d4901fd8ea7a92b14e13d"
 metafile = true
 
 [[files]]
