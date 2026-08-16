@@ -1,6 +1,58 @@
 hash-format = "sha256"
 
 [[files]]
+file = "config/adaptive_performance_tweaks/ai_throttle.cfg"
+hash = "3bbaf42ca21252dcc5b888da4ce7c24f9088cb39c868f2b939ab57b0c0ecf67e"
+
+[[files]]
+file = "config/adaptive_performance_tweaks/items.cfg"
+hash = "179b3cc704157e0e95fa3c6f40f5f8ff283785a371f29ac8d4527d5228b6b032"
+
+[[files]]
+file = "config/adaptive_performance_tweaks/player_easy_child_mode.cfg"
+hash = "7c3229a74c339f5beb06db98e952d7a7fdcb5f59f7f96591ee28fa079eb9cc7e"
+
+[[files]]
+file = "config/adaptive_performance_tweaks/spawn.cfg"
+hash = "e587450ab7ce75edd2a5b6896d1c7f7364f6817019dfa47ce46a5da57247001e"
+
+[[files]]
+file = "config/biomesoplenty/generation.toml"
+hash = "428c8be557854161e82b21b5654d2865b9b0c53bba969f20398568f94d4ae030"
+
+[[files]]
+file = "config/create-server.toml"
+hash = "43fd49a7b54b1b0c58ca67b70268e2a791197f6934faf07f317fe8ae91c2671d"
+
+[[files]]
+file = "config/crittersandcompanions-common.json5"
+hash = "f17308cb012ddbb115f039d2759a9a2d6044669fce8fd696d5f9375e95067ebf"
+
+[[files]]
+file = "config/epicfight-common.toml"
+hash = "109880f5bc27aa1b36aa441f82d39c7cc06610f0e9628a7015ae50afd3bab9d8"
+
+[[files]]
+file = "config/iris.properties"
+hash = "695f7cf454009cf890896bf89a5d12cb395e94584bfc4a60b4481cde14077191"
+
+[[files]]
+file = "config/irons_spellbooks-server.toml"
+hash = "384ce9818b83762df52bde24de9f021d0308782b9dc1f22ba69e2f864bba24e7"
+
+[[files]]
+file = "config/lootr-common.toml"
+hash = "0caaeaa664d242c97b9344a6d5a30aabf2c4af52d8fb18b4cb63a9fa543bf74d"
+
+[[files]]
+file = "config/minecolonies-server.toml"
+hash = "c3a6308f2baa21b91119648e2c85ac1568ab8087d55e79eaa1313a7d2ad9d8d4"
+
+[[files]]
+file = "config/naturalist-server.toml"
+hash = "6ab307d70183380a10a0cbc50de621c2d23d43946384b8c08531acec14eb8dbf"
+
+[[files]]
 file = "mods/adaptive-performance-tweaks.pw.toml"
 hash = "8fe1bd6a78ea5505d360d303af05c319ea0f1ffd6dc4ad81eb2510acc0fad021"
 metafile = true
@@ -376,5 +428,13 @@ hash = "539f362e9e192cf3b2813e0dfdfc51a5e6814129c6e82a9733842529beea6242"
 metafile = true
 
 [[files]]
+file = "options.txt"
+hash = "2d7428102652ba36ad41a194b5e596176169139f4e83a3ca6d0e6cdb74531d90"
+
+[[files]]
 file = "shaderpacks/Nostalgia_v5.1.zip"
 hash = "7d7211af2fac6d9b3c7fcbaad7a47f1a612450376d14383088908831c18b6cc8"
+
+[[files]]
+file = "shaderpacks/Nostalgia_v5.1.zip.txt"
+hash = "d20173372dfbc152f7ef0c21de3c227962694c46ff5de40850afa4537e132304"
