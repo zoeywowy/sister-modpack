@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Packwiz Proxy · pack.toml & index.toml</title>
+  <style>
+    /* --- clean dark theme --- */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #0d1117;
+      font-family: 'Segoe UI', 'Fira Code', monospace;
+      padding: 1.5rem;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+    }
+    .container {
+      max-width: 1200px;
+      width: 100%;
+      background: #161b22;
+      border-radius: 16px;
+      border: 1px solid #30363d;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.5);
+      overflow: hidden;
+    }
+    .tabs {
+      display: flex;
+      background: #0d1117;
+      border-bottom: 1px solid #30363d;
+      gap: 0;
+      flex-wrap: wrap;
+    }
+    .tab-btn {
+      background: transparent;
+      border: none;
+      padding: 0.8rem 1.8rem;
+      color: #8b949e;
+      font-family: inherit;
+      font-size: 0.95rem;
+      cursor: pointer;
+      border-bottom: 2px solid transparent;
+      transition: 0.2s;
+      font-weight: 500;
+      letter-spacing: 0.3px;
+    }
+    .tab-btn:hover {
+      color: #f0f6fc;
+      background: #1c2128;
+    }
+    .tab-btn.active {
+      color: #f0f6fc;
+      border-bottom-color: #58a6ff;
+      background: #0d1117;
+    }
+    .tab-content {
+      display: none;
+      background: #0d1117;
+    }
+    .tab-content.active {
+      display: block;
+    }
+    .code-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.7rem 1.8rem;
+      background: #161b22;
+      border-bottom: 1px solid #21262d;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .code-header .file-name {
+      color: #f0f6fc;
+      font-weight: 400;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .code-header .file-name span {
+      background: #21262d;
+      padding: 0.1rem 0.6rem;
+      border-radius: 20px;
+      font-size: 0.7rem;
+      color: #8b949e;
+    }
+    .badge-group {
+      display: flex;
+      gap: 0.6rem;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .status-badge {
+      font-size: 0.75rem;
+      padding: 0.2rem 0.9rem;
+      border-radius: 30px;
+      background: #21262d;
+      border: 1px solid #30363d;
+      color: #c9d1d9;
+    }
+    .status-badge.loading { color: #f0e6a0; border-color: #d4a72c; }
+    .status-badge.success { color: #7ee787; border-color: #238636; }
+    .status-badge.error { color: #f85149; border-color: #da3633; }
+    .action-btn {
+      background: transparent;
+      border: 1px solid #30363d;
+      color: #c9d1d9;
+      padding: 0.2rem 0.9rem;
+      border-radius: 30px;
+      font-size: 0.7rem;
+      cursor: pointer;
+      transition: 0.15s;
+      font-family: inherit;
+    }
+    .action-btn:hover {
+      background: #21262d;
+      border-color: #58a6ff;
+      color: #f0f6fc;
+    }
+    .action-btn.copied {
+      border-color: #238636;
+      color: #7ee787;
+    }
+    pre {
+      background: #0d1117;
+      color: #e6edf3;
+      padding: 1.2rem 1.8rem;
+      margin: 0;
+      font-family: 'JetBrains Mono', 'Fira Code', monospace;
+      font-size: 0.85rem;
+      line-height: 1.7;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      overflow-x: auto;
+      max-height: 70vh;
+      min-height: 200px;
+      scrollbar-width: thin;
+      scrollbar-color: #30363d #0d1117;
+    }
+    pre::-webkit-scrollbar { width: 8px; height: 8px; }
+    pre::-webkit-scrollbar-track { background: #0d1117; }
+    pre::-webkit-scrollbar-thumb { background: #30363d; border-radius: 8px; }
+    .footer {
+      background: #0d1117;
+      border-top: 1px solid #21262d;
+      padding: 0.6rem 1.8rem;
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.7rem;
+      color: #484f58;
+      flex-wrap: wrap;
+      gap: 0.3rem 1rem;
+    }
+    .footer a { color: #58a6ff; text-decoration: none; }
+    .footer a:hover { text-decoration: underline; }
+    .refresh-hint {
+      color: #484f58;
+      font-size: 0.7rem;
+    }
+    .url-endpoint {
+      background: #161b22;
+      padding: 0.2rem 0.8rem;
+      border-radius: 16px;
+      font-size: 0.7rem;
+      color: #58a6ff;
+      border: 1px solid #21262d;
+      font-family: monospace;
+    }
+    @media (max-width: 600px) {
+      body { padding: 0.8rem; }
+      .tab-btn { padding: 0.6rem 1rem; font-size: 0.8rem; }
+      pre { font-size: 0.75rem; padding: 0.8rem 1rem; }
+      .code-header { padding: 0.5rem 1rem; flex-direction: column; align-items: stretch; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <!-- Tabs -->
+  <div class="tabs">
+    <button class="tab-btn active" data-tab="pack">📦 pack.toml</button>
+    <button class="tab-btn" data-tab="index">📑 index.toml</button>
+  </div>
+
+  <!-- Pack.toml tab -->
+  <div id="tab-pack" class="tab-content active">
+    <div class="code-header">
+      <span class="file-name">📄 pack.toml <span>main</span></span>
+      <div class="badge-group">
+        <span class="status-badge loading" id="packStatus">⟳ loading</span>
+        <button class="action-btn" id="copyPackBtn">📋 copy</button>
+        <span class="url-endpoint" id="packEndpoint">/pack.toml</span>
+      </div>
+    </div>
+    <pre id="packOutput"><span style="color:#8b949e">// fetching pack.toml …</span></pre>
+  </div>
+
+  <!-- Index.toml tab -->
+  <div id="tab-index" class="tab-content">
+    <div class="code-header">
+      <span class="file-name">📄 index.toml <span>referenced by pack</span></span>
+      <div class="badge-group">
+        <span class="status-badge loading" id="indexStatus">⟳ loading</span>
+        <button class="action-btn" id="copyIndexBtn">📋 copy</button>
+        <span class="url-endpoint" id="indexEndpoint">/index.toml</span>
+      </div>
+    </div>
+    <pre id="indexOutput"><span style="color:#8b949e">// fetching index.toml …</span></pre>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <span>🔄 auto‑refresh every <span id="refreshInterval">60</span>s · <span id="nextRefresh">—</span></span>
+    <span>
+      <span id="lastFetch">—</span>
+      <span style="margin-left: 1rem;">⚡ <a href="#" id="manualRefreshLink">refresh now</a></span>
+    </span>
+  </div>
+</div>
+
+<script>
+(function() {
+  'use strict';
+
+  // --- CONFIG ---
+  const REPO_OWNER = 'zoeywowy';
+  const REPO_NAME = 'sister-modpack';
+  const BRANCH = 'main';
+  const REFRESH_INTERVAL = 60; // seconds
+
+  // Build raw URLs
+  const PACK_URL = `https://raw.githubusercontent.com/${REPO_OWNER}/${REPO_NAME}/refs/heads/${BRANCH}/pack.toml`;
+  const INDEX_URL = `https://raw.githubusercontent.com/${REPO_OWNER}/${REPO_NAME}/refs/heads/${BRANCH}/index.toml`;
+
+  // --- DOM refs ---
+  const packPre = document.getElementById('packOutput');
+  const indexPre = document.getElementById('indexOutput');
+  const packStatus = document.getElementById('packStatus');
+  const indexStatus = document.getElementById('indexStatus');
+  const lastFetchSpan = document.getElementById('lastFetch');
+  const nextRefreshSpan = document.getElementById('nextRefresh');
+  const refreshIntervalSpan = document.getElementById('refreshInterval');
+  const manualRefreshLink = document.getElementById('manualRefreshLink');
+
+  const copyPackBtn = document.getElementById('copyPackBtn');
+  const copyIndexBtn = document.getElementById('copyIndexBtn');
+
+  // Tab switching
+  const tabBtns = document.querySelectorAll('.tab-btn');
+  const tabContents = {
+    pack: document.getElementById('tab-pack'),
+    index: document.getElementById('tab-index')
+  };
+
+  // --- State ---
+  let packContent = '';
+  let indexContent = '';
+  let secondsUntilRefresh = REFRESH_INTERVAL;
+  let fetchTimer = null;
+  let countdownTimer = null;
+  let isFetching = false;
+
+  // --- Helpers ---
+  function formatTime(date) {
+    if (!date) return '—';
+    return date.toLocaleTimeString('en-US', { hour12: false, hour: '2-digit', minute: '2-digit', second: '2-digit' });
+  }
+
+  function updateCountdown() {
+    const now = new Date();
+    const next = new Date(now.getTime() + secondsUntilRefresh * 1000);
+    nextRefreshSpan.textContent = 'next: ' + formatTime(next);
+    refreshIntervalSpan.textContent = REFRESH_INTERVAL;
+  }
+
+  function tickCountdown() {
+    if (secondsUntilRefresh > 0) secondsUntilRefresh--;
+    updateCountdown();
+  }
+
+  // --- Fetch logic ---
+  async function fetchFile(url, preElem, statusElem, contentStore, label) {
+    statusElem.className = 'status-badge loading';
+    statusElem.textContent = '⟳ fetching';
+
+    try {
+      const resp = await fetch(url, { cache: 'no-store', headers: { 'Accept': 'text/plain' } });
+      if (!resp.ok) throw new Error(`HTTP ${resp.status} ${resp.statusText}`);
+      const text = await resp.text();
+      if (text.trim() === '') throw new Error('empty response');
+
+      // Update UI
+      preElem.textContent = text;
+      statusElem.className = 'status-badge success';
+      statusElem.textContent = '✓ live';
+
+      // Store content for copy
+      if (label === 'pack') packContent = text;
+      else indexContent = text;
+
+      return true;
+    } catch (err) {
+      console.warn(`[${label}] fetch error:`, err);
+      // Keep existing content if available, else show error
+      if (contentStore && contentStore.length > 0) {
+        preElem.textContent = contentStore;
+      } else {
+        preElem.textContent = `❌ Failed to load ${label}.toml\n` +
+                             `URL: ${url}\n` +
+                             `Error: ${err.message}\n\n` +
+                             `Check file exists at that URL.`;
+      }
+      statusElem.className = 'status-badge error';
+      statusElem.textContent = '✗ error';
+      return false;
+    }
+  }
+
+  async function fetchAll() {
+    if (isFetching) return;
+    isFetching = true;
+
+    // Reset countdown
+    secondsUntilRefresh = REFRESH_INTERVAL;
+    updateCountdown();
+
+    // Fetch both in parallel
+    const [packOk, indexOk] = await Promise.all([
+      fetchFile(PACK_URL, packPre, packStatus, packContent, 'pack'),
+      fetchFile(INDEX_URL, indexPre, indexStatus, indexContent, 'index')
+    ]);
+
+    // Update last fetch time
+    lastFetchSpan.textContent = 'last fetch: ' + formatTime(new Date());
+
+    isFetching = false;
+  }
+
+  // --- Copy functions ---
+  function copyContent(text, btn) {
+    if (!text || text.includes('Failed to load') || text.includes('// fetching')) {
+      btn.textContent = '⚠️ empty';
+      setTimeout(() => btn.textContent = '📋 copy', 1200);
+      return;
+    }
+
+    const doCopy = (content) => {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(content).then(() => {
+          btn.textContent = '✅ copied!';
+          btn.classList.add('copied');
+          setTimeout(() => { btn.textContent = '📋 copy'; btn.classList.remove('copied'); }, 2000);
+        }).catch(() => fallbackCopy(content, btn));
+      } else {
+        fallbackCopy(content, btn);
+      }
+    };
+
+    doCopy(text);
+  }
+
+  function fallbackCopy(text, btn) {
+    const ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    try {
+      const ok = document.execCommand('copy');
+      btn.textContent = ok ? '✅ copied!' : '⚠️ failed';
+    } catch {
+      btn.textContent = '⚠️ error';
+    }
+    setTimeout(() => { btn.textContent = '📋 copy'; }, 2000);
+    document.body.removeChild(ta);
+  }
+
+  // --- Tab switching ---
+  function switchTab(tabId) {
+    // Update buttons
+    tabBtns.forEach(btn => {
+      btn.classList.toggle('active', btn.dataset.tab === tabId);
+    });
+    // Update content
+    Object.keys(tabContents).forEach(key => {
+      tabContents[key].classList.toggle('active', key === tabId);
+    });
+  }
+
+  // --- Init ---
+  function init() {
+    // Set up tabs
+    tabBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        switchTab(btn.dataset.tab);
+      });
+    });
+
+    // Manual refresh
+    manualRefreshLink.addEventListener('click', (e) => {
+      e.preventDefault();
+      fetchAll();
+    });
+
+    // Copy buttons
+    copyPackBtn.addEventListener('click', () => {
+      copyContent(packContent || packPre.textContent, copyPackBtn);
+    });
+    copyIndexBtn.addEventListener('click', () => {
+      copyContent(indexContent || indexPre.textContent, copyIndexBtn);
+    });
+
+    // Initial fetch
+    fetchAll();
+
+    // Countdown tick every second
+    countdownTimer = setInterval(tickCountdown, 1000);
+
+    // Refresh timer
+    fetchTimer = setInterval(fetchAll, REFRESH_INTERVAL * 1000);
+
+    // Cleanup on unload
+    window.addEventListener('beforeunload', () => {
+      if (fetchTimer) clearInterval(fetchTimer);
+      if (countdownTimer) clearInterval(countdownTimer);
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+
+})();
+</script>
+</body>
+</html>
