@@ -313,6 +313,11 @@ hash = "6b6683fd8ec53d10d4fbef3b3d53922a1aaa8ef4d2e4b52bb819dc451f5d6b3d"
 metafile = true
 
 [[files]]
+file = "mods/decocraft.pw.toml"
+hash = "e07e26a8bf2af1dd03c09f0361cc0b0067fbc20c8f0612c9f800113427b12c9d"
+metafile = true
+
+[[files]]
 file = "mods/domum-ornamentum.pw.toml"
 hash = "406fd938da34e8d3beae9a7c82eed3ef5d20053a9d9ab4c5b76357e39e58bbc5"
 metafile = true
@@ -617,3 +622,7 @@ hash = "7d7211af2fac6d9b3c7fcbaad7a47f1a612450376d14383088908831c18b6cc8"
 [[files]]
 file = "shaderpacks/Nostalgia_v5.1.zip.txt"
 hash = "d20173372dfbc152f7ef0c21de3c227962694c46ff5de40850afa4537e132304"
+
+[[files]]
+file = "shaderpacks/shaders.properties"
+hash = "2119877d76965a04a88d8eb0cbfa567e177861cdbc4c93b0670dbcb3b79d812d"
