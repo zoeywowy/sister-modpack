@@ -1,8 +1,36 @@
 hash-format = "sha256"
 
 [[files]]
+file = "config/ProjectE/client.toml"
+hash = "75bc2600158526f2a26e241c9960ac3ff3bed1b9a0e254684c13db6b14309a49"
+
+[[files]]
+file = "config/ProjectE/server.toml"
+hash = "495e454a49e13cb849e93978a07feaae9a454e451b530ef1b21309d888a0bcde"
+
+[[files]]
 file = "config/adaptive_performance_tweaks/ai_throttle.cfg"
 hash = "3bbaf42ca21252dcc5b888da4ce7c24f9088cb39c868f2b939ab57b0c0ecf67e"
+
+[[files]]
+file = "config/adaptive_performance_tweaks/arrows.cfg"
+hash = "776102a582d9fd33007a83deea96c995188392dcaa733106a8bfc2bc83cd0023"
+
+[[files]]
+file = "config/adaptive_performance_tweaks/chunk_gen_throttle.cfg"
+hash = "daa4bbc6a3706bb80bb655d543f7e34deacb8173de16e95e257b0815d524c4fd"
+
+[[files]]
+file = "config/adaptive_performance_tweaks/core.cfg"
+hash = "e949ae107ebca0e52b307a8081eed9e704cadb83cae68d91799fa348326775c9"
+
+[[files]]
+file = "config/adaptive_performance_tweaks/experience_orbs.cfg"
+hash = "f218587161a1dd33543d1c79f86e0807cfefedec4ef98ee4bad84439001b4043"
+
+[[files]]
+file = "config/adaptive_performance_tweaks/gamerules.cfg"
+hash = "019ae0217061ad4816f7594a0f9514029f26d8dedeb42b2498d8d59936050325"
 
 [[files]]
 file = "config/adaptive_performance_tweaks/items.cfg"
@@ -13,8 +41,16 @@ file = "config/adaptive_performance_tweaks/player_easy_child_mode.cfg"
 hash = "7c3229a74c339f5beb06db98e952d7a7fdcb5f59f7f96591ee28fa079eb9cc7e"
 
 [[files]]
+file = "config/adaptive_performance_tweaks/player_login_protection.cfg"
+hash = "a98b91c87960c944821f4e762c19688c6d322ce2f45f9e2f2368c2e87a4226d3"
+
+[[files]]
 file = "config/adaptive_performance_tweaks/player_starter_protection.cfg"
 hash = "08c01ce5077469bebd0a83c4ab259854cba1be75165f02d2ddd096ae472571ae"
+
+[[files]]
+file = "config/adaptive_performance_tweaks/sim_distance.cfg"
+hash = "6f2da89cee5708efae7baa2367b665f41eb5311ffefba931e30ac9e2aa4a9416"
 
 [[files]]
 file = "config/adaptive_performance_tweaks/spawn.cfg"
@@ -29,8 +65,24 @@ file = "config/biomesoplenty/generation.toml"
 hash = "44398dc458f517ed6f1845806d844a1fe1d9eb371ec76554222703ef8783c104"
 
 [[files]]
+file = "config/c2me.toml"
+hash = "fe64691b146c458305c61bbc4b9c07279a1964680167d0fbef8fb3d93c52da3e"
+
+[[files]]
+file = "config/controlify.json"
+hash = "1b676fbc2421c108f0d24e84402408dbce37f667d1f20e49c07fcf156b6597b9"
+
+[[files]]
+file = "config/create-client.toml"
+hash = "ef1410c51ad462f50e08936ddb9867558b7d772ea6480aac37bfed16dcc87eea"
+
+[[files]]
 file = "config/create-server.toml"
 hash = "67265bb6a61668af426abb33d1a567e516b3db371dadb42a719fb40da7d253d7"
+
+[[files]]
+file = "config/create_jetpack-common.toml"
+hash = "adee489f7bf29ab370cdd4438b2644d07e4168f26a013cb331f3fd0b8740fedb"
 
 [[files]]
 file = "config/crittersandcompanions-common.json5"
@@ -38,15 +90,31 @@ hash = "f17308cb012ddbb115f039d2759a9a2d6044669fce8fd696d5f9375e95067ebf"
 
 [[files]]
 file = "config/entityculling.json"
-hash = "5692897bda673ee513c212e1d04c4753f2ded4708726c4ac63b81659fb4bf5ca"
+hash = "200ffc179b5d9513b76a0627c043b87a0eb2ad9a46c869c0023f16291bfa2dd1"
+
+[[files]]
+file = "config/epicfight-client.toml"
+hash = "f2f6a34acb822a2154ee800eaf804484582cf56454badfcf973ba0e14e63be23"
 
 [[files]]
 file = "config/epicfight-common.toml"
 hash = "0b3ef1d949429a52c9d9404c57e907ac79b6e44f8282640488b44a415e57b852"
 
 [[files]]
+file = "config/ferritecore-mixin.toml"
+hash = "e87191c36080e1d076fe99eadcdbc54e6bc8be829fc4be004087f832f9415625"
+
+[[files]]
+file = "config/immediatelyfast.json"
+hash = "1fe0d229b7eff89707588558acbd83fe0115343cf846cba6a70b0fd099374ab7"
+
+[[files]]
 file = "config/iris.properties"
 hash = "695f7cf454009cf890896bf89a5d12cb395e94584bfc4a60b4481cde14077191"
+
+[[files]]
+file = "config/irons_spellbooks-client.toml"
+hash = "bbc95917cb6fe552175bd2e1262a3cc721e77a185fc38937e0a0e782d24cfb59"
 
 [[files]]
 file = "config/irons_spellbooks-server.toml"
@@ -57,16 +125,32 @@ file = "config/lithium.properties"
 hash = "f218f58338ce24b66448f9a6b2ed4e167432f723d9a4f1bf86bedb3de94643a5"
 
 [[files]]
+file = "config/lootr-client.toml"
+hash = "635005fe1fd7ef298a8966bd076bd2bab19f0c5a71f9a1e1d55b188f3df806f2"
+
+[[files]]
 file = "config/lootr-common.toml"
 hash = "7b693f6d9939d8f198cd4c530add127a34844f862e2b550807305386b316bc16"
+
+[[files]]
+file = "config/mca.json"
+hash = "7cb7248a4abdc0f4bff41179ec950679dac5136617cfda93a45b196e99025584"
+
+[[files]]
+file = "config/minecolonies-client.toml"
+hash = "15bcc63e73f50199f43525b310591622f873874e45830b3108461c548b0b7c6b"
 
 [[files]]
 file = "config/minecolonies-server.toml"
 hash = "36c0a63c39f1d40f83d737b4bb058671cc973477957ab706f8968f46b4af8ba7"
 
 [[files]]
+file = "config/minecolonies_tweaks-server.toml"
+hash = "b535af3ca6a9aa93117371fe1000b0b7ad9c4c124139aacc1ce5e7f944554a64"
+
+[[files]]
 file = "config/modernfix-mixins.properties"
-hash = "6bc4c5d23656c82ccf888f5c9368a804e5a40332fdb79057765a2e99d9e255a1"
+hash = "04ad60797dcb5a208f869c9bcb85195eb3cbd1f7d6549ce8dd7c727408521025"
 
 [[files]]
 file = "config/naturalist-server.toml"
@@ -75,6 +159,18 @@ hash = "6ab307d70183380a10a0cbc50de621c2d23d43946384b8c08531acec14eb8dbf"
 [[files]]
 file = "config/sodium-options.json"
 hash = "c2d909234c14defc039e4dadae389cbe819118e67832c70421cbd9d6e10e6775"
+
+[[files]]
+file = "config/sophisticatedbackpacks-server.toml"
+hash = "ba0322957731bc3d716893a5f0f3411a8be7df9df19b9a2911bb5508ac894ee5"
+
+[[files]]
+file = "config/supplementaries-common.toml"
+hash = "8e37493ee6b601bd787411ef8959a3ae5b905e68df85925d63a81b46b0f18182"
+
+[[files]]
+file = "config/waystones-common.toml"
+hash = "4d891c1ca326e5a21d15c75a2ff51545dd6b1a21b777bb191cd9ad2ae12d0ba8"
 
 [[files]]
 file = "mods/adaptive-performance-tweaks.pw.toml"
@@ -202,6 +298,11 @@ hash = "6f0888ffa4d8180fd042b0b93188440bfef04db4821a6b654401b52074e0070b"
 metafile = true
 
 [[files]]
+file = "mods/creativecore.pw.toml"
+hash = "318c96390db6b23f50f5f7dea4db0f8394a47edf96dff25b8a0b241956790114"
+metafile = true
+
+[[files]]
 file = "mods/critters-and-companions.pw.toml"
 hash = "e16341547a7e580456c1ec30e0b220ee6db94f40293b839e15d09d793468c0df"
 metafile = true
@@ -259,6 +360,16 @@ metafile = true
 [[files]]
 file = "mods/glitchcore.pw.toml"
 hash = "fa2d61b9c6b4446bbad9767e20bbd43c8c1e25bf0f7ecc9a237bf995456d02f5"
+metafile = true
+
+[[files]]
+file = "mods/gravestone-and-sable-compatibility-patch.pw.toml"
+hash = "6baec0ac505606e2066b5a00a5873cc6895f0ca639a0bfabd74bf408dcf25749"
+metafile = true
+
+[[files]]
+file = "mods/gravestone-mod.pw.toml"
+hash = "6b600644bc76fcb7e45921d5d3dc55605fc155add265c04ed79a1545ba9109d0"
 metafile = true
 
 [[files]]
@@ -397,6 +508,11 @@ hash = "5b30dafc9e96471978376ee010cec0ddf592377ac94192c9370cb37973e1e95f"
 metafile = true
 
 [[files]]
+file = "mods/playerrevive.pw.toml"
+hash = "2fce8261a3f3f1c97232926429dfc4aa7ba871a04ce4fde8d87f21404a6ac857"
+metafile = true
+
+[[files]]
 file = "mods/projecte.pw.toml"
 hash = "bdca798ffe4124bf43ea13f1fa5f0593a7539762240edb56c47b1976b413ebc4"
 metafile = true
@@ -408,7 +524,7 @@ metafile = true
 
 [[files]]
 file = "mods/sable.pw.toml"
-hash = "56c47f4f4732d86a144c8c86af80411238c3ea74f6b96b0bc5174d2f20073a98"
+hash = "674aaf0dc67f808f0054cfc7bbe041d6725fcbbe97644a85ffbd946a22d35666"
 metafile = true
 
 [[files]]
@@ -472,6 +588,11 @@ hash = "a7074e8e499d34f5ce633dbd33f818e376dd1941ec5b1d97a33acd019df69b5a"
 metafile = true
 
 [[files]]
+file = "mods/two-players-one-horse.pw.toml"
+hash = "ab673373fa8785fb63443f8ae2c8692e9e8571d102015d210a3f2247ce6f91d3"
+metafile = true
+
+[[files]]
 file = "mods/waystones.pw.toml"
 hash = "18755836fe5817992e8f52bdb1d42857e85a41a7a19287b04d63a072006931b5"
 metafile = true
@@ -484,6 +605,10 @@ metafile = true
 [[files]]
 file = "options.txt"
 hash = "2d7428102652ba36ad41a194b5e596176169139f4e83a3ca6d0e6cdb74531d90"
+
+[[files]]
+file = "packwiz-installer-bootstrap.jar"
+hash = "a8fbb24dc604278e97f4688e82d3d91a318b98efc08d5dbfcbcbcab6443d116c"
 
 [[files]]
 file = "shaderpacks/Nostalgia_v5.1.zip"
